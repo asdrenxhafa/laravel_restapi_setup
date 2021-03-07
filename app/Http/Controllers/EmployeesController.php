@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\EmployeesRequest;
 use App\Http\Resources\EmployeesResource as EmployeesResource;
 use App\Models\Employee;
-use App\Mail\TestMail;
-use Illuminate\Support\Facades\Mail;
 
 class EmployeesController extends Controller
 {
@@ -16,26 +14,26 @@ class EmployeesController extends Controller
         $this->authorize('viewAny',Employee::class);
 
         $collection = $this->sortData(Employee::select('*'));
+
         return $collection->paginate(request()->has('per_page') ? request()->per_page : 10);
     }
 
 
-    public function show($id)
+    public function show(Employee $employee)
     {
-        $this->authorize('viewAny',Employee::class);
+        $this->authorize('view',$employee);
 
-        return new EmployeesResource(Employee::findOrFail($id));
+        return new EmployeesResource($employee);
     }
 
 
     public function store(EmployeesRequest $request)
     {
+        $employee = new Employee($request->validated());
 
-        $newEmployee = new Employee($request->validated());
+        $employee->save();
 
-        Mail::to($newEmployee->email)->send(new TestMail());
-
-        return $this->showOne($newEmployee,201);
+        return $this->showOne($employee,201);
     }
 
 
