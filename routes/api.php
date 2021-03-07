@@ -21,7 +21,7 @@ Route::post('/sanctum/token', function (Request $request) {
         'device_name' => 'required',
     ]);
 
-    $user = \App\User::where('email', $request->email)->first();
+    $user = \App\Models\User::where('email', $request->email)->first();
 
     if (! $user || ! \Illuminate\Support\Facades\Hash::check($request->password, $user->password)) {
         throw \Illuminate\Validation\ValidationException::withMessages([
