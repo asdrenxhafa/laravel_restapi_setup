@@ -2,9 +2,8 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
-use App\Company;
-use App\Employee;
+use App\Models\Company;
+use App\Models\Employee;
 use Faker\Generator as Faker;
 
 
@@ -15,7 +14,7 @@ $factory->define(Company::class, function (Faker $faker) {
     static $password;
 
     return [
-        'name' => Str::random(10),
+        'name' => \Illuminate\Support\Str::random(10),
         'email' => $faker->unique()->safeEmail,
         'logo' => $faker->imageUrl(100,100),
         'website' => $faker->url,
