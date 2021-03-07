@@ -60,20 +60,24 @@ trait ApiResponser
 
     public function cacheResponse($data)
     {
-        $url = request()->url();
+        try {
+            $url = request()->url();
 
-        $queryParams = request()->query();
+            $queryParams = request()->query();
 
-        ksort($queryParams);
+            ksort($queryParams);
 
-        $queryString = http_build_query($queryParams);
+            $queryString = http_build_query($queryParams);
 
-        $fullUrl = '{$url}?{$queryString}';
+            $fullUrl = '{$url}?{$queryString}';
 
-        return cache()->remember($fullUrl,60, function() use($data) {
-            return $data;
-        });
+            return cache()->remember($fullUrl,60, function() use($data) {
+                return $data;
+            });
 
+        }catch (\Exception $e){
+            return $e->getMessage();
+        }
     }
 
 }
