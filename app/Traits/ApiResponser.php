@@ -27,10 +27,6 @@ trait ApiResponser
 
     protected function showAll(\Illuminate\Database\Eloquent\Builder $collection, $code = 200)
     {
-        if($collection->isEmpty()){
-            return $this->successResponse($collection, $code);
-        }
-
         return $this->successResponse($collection,$code);
     }
 
