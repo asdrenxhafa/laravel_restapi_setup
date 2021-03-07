@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Company;
-use App\Employee;
+use App\Models\Company;
+use App\Models\Employee;
 use App\Policies\CompaniesPolicy;
 use App\Policies\EmployeesPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;

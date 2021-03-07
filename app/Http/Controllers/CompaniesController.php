@@ -20,20 +20,21 @@ class CompaniesController extends Controller
     }
 
 
-    public function show($id)
+    public function show(Company $company)
     {
-        $this->authorize('view',Company::class);
+        $this->authorize('view',$company);
 
-        return new CompaniesResource(Company::findOrFail($id));
+        return new CompaniesResource($company);
     }
 
 
     public function store(CompaniesRequest $request)
     {
         $newEmployee = new Company($request->validated());
-
         $newEmployee->logo = $request->logo->store('');
+
         $newEmployee->save();
+
         return $this->showOne($newEmployee,201);
     }
 
@@ -60,13 +61,4 @@ class CompaniesController extends Controller
 
         return $this->showOne($company);
     }
-
-
-    public function employee($id)
-    {
-        $ans = Company::find($id)->employees()->get();
-
-        return $this->showAll($ans);
-    }
-
 }
