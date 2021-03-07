@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf5121fd-8357-4466-888c-73e96531a722" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Companies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Employees.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompaniesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompaniesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CompaniesStoreValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CompaniesRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Companies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CompaniesResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Employees.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EmployeesResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/CompaniesPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/CompaniesPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +156,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asdren\Desktop\laravel_restapi_setup" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asdren\Desktop\laravel_restapi_setup\app\Models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -163,7 +185,7 @@
       <workItem from="1599030929826" duration="18602000" />
       <workItem from="1599118056113" duration="10670000" />
       <workItem from="1599467216107" duration="55000" />
-      <workItem from="1615141683027" duration="1597000" />
+      <workItem from="1615141683027" duration="2393000" />
     </task>
     <servers />
   </component>
@@ -180,51 +202,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598967035495">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1598967035495" />
-    <state x="761" y="399" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1599056085507">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="761" y="399" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1050@0.0.1920.1050" timestamp="1599056085507" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1599467268710">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1599467268710" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1598858362149">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598858362149" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1598858362149">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598858362149" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1598858362149">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598858362149" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1598858362149">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598858362149" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1599037164081">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1599037164081" />
-    <state width="592" height="446" key="SwitcherDM" timestamp="1598971590167">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="592" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1598971590167" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1599031781390">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1599031781390" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1599134487404">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1599134487404" />
   </component>
 </project>

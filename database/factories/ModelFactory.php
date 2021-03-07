@@ -3,15 +3,15 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Model;
-use App\Companies;
-use App\Employees;
+use App\Company;
+use App\Employee;
 use Faker\Generator as Faker;
 
 
 
 
 
-$factory->define(Companies::class, function (Faker $faker) {
+$factory->define(Company::class, function (Faker $faker) {
     static $password;
 
     return [
@@ -22,7 +22,7 @@ $factory->define(Companies::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(Employees::class, function (Faker $faker) {
+$factory->define(Employee::class, function (Faker $faker) {
     static $password;
 
     return [

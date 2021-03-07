@@ -3,36 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EmployeesRequest;
-use App\Http\Resources\Employees as EmployeesResource;
-use App\Employees;
+use App\Http\Resources\EmployeesResource as EmployeesResource;
+use App\Models\Employee;
 use App\Mail\TestMail;
-use DB;
 use Illuminate\Support\Facades\Mail;
 
-class EmployeesController extends ApiController
+class EmployeesController extends Controller
 {
 
     public function index()
     {
-        $this->authorize('viewAny',Employees::class);
+        $this->authorize('viewAny',Employee::class);
 
-        $collection = $this->sortData(Employees::select('*'));
+        $collection = $this->sortData(Employee::select('*'));
         return $collection->paginate(request()->has('per_page') ? request()->per_page : 10);
     }
 
 
     public function show($id)
     {
-        $this->authorize('viewAny',Employees::class);
+        $this->authorize('viewAny',Employee::class);
 
-        return new EmployeesResource(Employees::findOrFail($id));
+        return new EmployeesResource(Employee::findOrFail($id));
     }
 
 
     public function store(EmployeesRequest $request)
     {
 
-        $newEmployee = new Employees($request->validated());
+        $newEmployee = new Employee($request->validated());
 
         Mail::to($newEmployee->email)->send(new TestMail());
 
@@ -40,7 +39,7 @@ class EmployeesController extends ApiController
     }
 
 
-    public function update(EmployeesRequest $request,Employees $employee)
+    public function update(EmployeesRequest $request, Employee $employee)
     {
         $employee->update($request->validated());
 
@@ -48,7 +47,7 @@ class EmployeesController extends ApiController
     }
 
 
-    public function destroy(Employees $employee)
+    public function destroy(Employee $employee)
     {
         $employee->delete();
 

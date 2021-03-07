@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\softDeletes;
 
-class Employees extends Model
+class Employee extends Model
 {
     use softDeletes;
 
@@ -14,7 +14,7 @@ class Employees extends Model
     public $table = "employees";
 
     public function companyRelationship(){
-        return $this->belongsTo(Companies::class,'company');
+        return $this->belongsTo(Company::class,'company');
     }
 
     protected $fillable = [

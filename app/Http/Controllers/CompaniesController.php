@@ -2,37 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CompaniesStoreValidation;
-use App\Http\Resources\Companies as CompaniesResource;
-use App\Companies;
-use Illuminate\Support\Facades\DB;
+use App\Http\Requests\CompaniesRequest;
+use App\Http\Resources\CompaniesResource;
+use App\Models\Company;
 use Illuminate\Support\Facades\Storage;
-use phpDocumentor\Reflection\Types\Integer;
 
-class CompaniesController extends ApiController
+class CompaniesController extends Controller
 {
 
     public function index()
     {
-        $this->authorize('viewAny',Companies::class);
+        $this->authorize('viewAny',Company::class);
 
-        $collection = $this->sortData( Companies::select('*'));
+        $companies = $this->sortData( Company::select('*'));
 
-        return $collection->paginate(request()->has('per_page') ? request()->per_page : 10);
+        return $companies->paginate(request()->has('per_page') ? request()->per_page : 10);
     }
 
 
     public function show($id)
     {
-        $this->authorize('view',Companies::class);
+        $this->authorize('view',Company::class);
 
-        return new CompaniesResource(Companies::findOrFail($id));
+        return new CompaniesResource(Company::findOrFail($id));
     }
 
 
-    public function store(CompaniesStoreValidation $request)
+    public function store(CompaniesRequest $request)
     {
-        $newEmployee = new Companies($request->validated());
+        $newEmployee = new Company($request->validated());
 
         $newEmployee->logo = $request->logo->store('');
         $newEmployee->save();
@@ -40,7 +38,7 @@ class CompaniesController extends ApiController
     }
 
 
-    public function update(CompaniesStoreValidation $request,Companies $company)
+    public function update(CompaniesRequest $request, Company $company)
     {
         $company->update($request->validated());
 
@@ -54,12 +52,8 @@ class CompaniesController extends ApiController
     }
 
 
-    public function destroy(Companies $company)
+    public function destroy(Company $company)
     {
-        if($company->exists()){
-            return ['exists'];
-        }
-
         $company->delete();
 
         Storage::delete($company->logo);
@@ -70,7 +64,7 @@ class CompaniesController extends ApiController
 
     public function employee($id)
     {
-        $ans = Companies::find($id)->employees()->get();
+        $ans = Company::find($id)->employees()->get();
 
         return $this->showAll($ans);
     }
