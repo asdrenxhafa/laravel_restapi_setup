@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bf5121fd-8357-4466-888c-73e96531a722" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompaniesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompaniesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/TestMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/EmployeeObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/EmployeeObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +185,8 @@
       <workItem from="1599030929826" duration="18602000" />
       <workItem from="1599118056113" duration="10670000" />
       <workItem from="1599467216107" duration="55000" />
-      <workItem from="1615141683027" duration="5165000" />
+      <workItem from="1615141683027" duration="6113000" />
+      <workItem from="1616593418879" duration="1074000" />
     </task>
     <servers />
   </component>
@@ -196,5 +203,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

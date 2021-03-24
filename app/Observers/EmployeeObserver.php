@@ -2,16 +2,17 @@
 
 namespace App\Observers;
 
-use App\Mail\TestMail;
 use App\Models\Employee;
-use Illuminate\Support\Facades\Mail;
+use App\Notifications\EmployeeWelcomeNotification;
+use Illuminate\Support\Facades\Notification;
 
 class EmployeeObserver
 {
 
     public function created(Employee $employee)
     {
-        Mail::to($employee->email)->send(new TestMail());
+        Notification::route('mail', $employee->email)
+            ->notify(new EmployeeWelcomeNotification($employee));
     }
 
 

@@ -5,9 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Requests\EmployeesRequest;
 use App\Http\Resources\EmployeesResource as EmployeesResource;
 use App\Models\Employee;
+use App\Repositories\Interfaces\IEmployeeRepository;
 
 class EmployeesController extends Controller
 {
+    private $employeeRepository;
+
+    public function __construct(IEmployeeRepository $employeeRepository)
+    {
+        $this->employeeRepository = $employeeRepository;
+    }
 
     public function index()
     {
@@ -31,7 +38,7 @@ class EmployeesController extends Controller
     {
         $employee = new Employee($request->validated());
 
-        $employee->save();
+        $this->employeeRepository->insert($employee);
 
         return $this->showOne($employee,201);
     }
@@ -39,7 +46,7 @@ class EmployeesController extends Controller
 
     public function update(EmployeesRequest $request, Employee $employee)
     {
-        $employee->update($request->validated());
+        $this->employeeRepository->update($employee->fill($request->validated()));
 
         return $this->showOne($employee);
     }
@@ -47,7 +54,7 @@ class EmployeesController extends Controller
 
     public function destroy(Employee $employee)
     {
-        $employee->delete();
+        $this->employeeRepository->delete($employee);
 
         return $this->showOne($employee);
     }
