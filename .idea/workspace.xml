@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf5121fd-8357-4466-888c-73e96531a722" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Providers/RespositoryServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/TestMail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/EmployeeObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/EmployeeObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompaniesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompaniesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +162,7 @@
       <recent name="C:\Users\Asdren\Desktop\laravel_restapi_setup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asdren\Desktop\laravel_restapi_setup\app" />
       <recent name="C:\Users\Asdren\Desktop\laravel_restapi_setup\app\Models" />
     </key>
   </component>
@@ -186,7 +188,9 @@
       <workItem from="1599118056113" duration="10670000" />
       <workItem from="1599467216107" duration="55000" />
       <workItem from="1615141683027" duration="6113000" />
-      <workItem from="1616593418879" duration="1074000" />
+      <workItem from="1616593418879" duration="1089000" />
+      <workItem from="1616661838492" duration="73000" />
+      <workItem from="1617268039658" duration="2779000" />
     </task>
     <servers />
   </component>

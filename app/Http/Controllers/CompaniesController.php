@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class CompaniesController extends Controller
 {
-    private $companyRepository;
+    public $companyRepository;
 
     public function __construct(ICompanyRepository $companyRepository)
     {
